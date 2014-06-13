@@ -3,7 +3,7 @@ MAINTAINER scollier <scollier@redhat.com>
 
 RUN yum -y update; yum clean all
 RUN yum -y install openssh-server; yum clean all
-ADD ./start.sh /start.sh
+#ADD ./start.sh /start.sh
 RUN mkdir /var/run/sshd
 RUN echo 'root:screencast' |chpasswd
 RUN useradd padupa
